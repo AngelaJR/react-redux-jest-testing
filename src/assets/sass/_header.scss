@@ -1,0 +1,26 @@
+#header {
+	background: $color-darkgray-5;
+	border-bottom: 1px solid $color-gray-4;
+	display: block;
+	margin: 0 auto;
+	padding: 10px 24px;
+	
+	.main-header {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		
+			>img {
+				width: 32px;
+				float: left;
+				margin-right: 12px;
+				}
+		
+			> h2 {
+				font-family: $font2;
+				color: $color-white;
+				font-weight: 400;
+				}
+		}
+	}

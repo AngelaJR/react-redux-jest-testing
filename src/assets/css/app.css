@@ -1,0 +1,432 @@
+/**
+ * UI/UX Developer: Angela Raymond
+ * UI/UX Developer Email: angela.raymond@ntconcepts.com
+ * Company: NT Concepts
+ * Description: React/Redux Jest Testing
+ * License: Proprietary, and not to be redistributed
+ */
+/* ************************************************************************************************ */
+/* Import Fonts *********************************************************************************** */
+/* ************************************************************************************************ */
+/* Raleway */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,900");
+/* Orbitron */
+@import url("https://fonts.googleapis.com/css?family=Orbitron:400,500,600,700,900&display=swap");
+/* Font Awesome 5 Brands */
+@font-face {
+  font-family: 'Font Awesome Brands';
+  src: url("../fonts/fontawesome/fa-brands-400.eot?hu3sw6");
+  src: url("../fonts/fontawesome/fa-brands-400.eot?hu3sw6#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-brands-400.ttf?hu3sw6") format("truetype"), url("../fonts/fontawesome/fa-brands-400.woff?hu3sw6") format("woff"), url("../fonts/fontawesome/fa-brands-400.woff2?hu3sw6") format("woff"), url("../fonts/fontawesome/fa-brands-400.svg?hu3sw6#fa") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Font Awesome 5 (Light) */
+@font-face {
+  font-family: 'Font Awesome Light';
+  src: url("../fonts/fontawesome/fa-light-300.eot?hu3sw5");
+  src: url("../fonts/fontawesome/fa-light-300.eot?hu3sw5#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-light-300.ttf?hu3sw5") format("truetype"), url("../fonts/fontawesome/fa-light-300.woff?hu3sw5") format("woff"), url("../fonts/fontawesome/fa-light-300.woff2?hu3sw5") format("woff"), url("../fonts/fontawesome/fa-light-300.svg?hu3sw5#fa") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+/* Font Awesome 5 (Regular) */
+@font-face {
+  font-family: 'Font Awesome Regular';
+  src: url("../fonts/fontawesome/fa-regular-400.eot?hu3sw4");
+  src: url("../fonts/fontawesome/fa-regular-400.eot?hu3sw4#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.ttf?hu3sw4") format("truetype"), url("../fonts/fontawesome/fa-regular-400.woff?hu3sw4") format("woff"), url("../fonts/fontawesome/fa-regular-400.woff2?hu3sw4") format("woff"), url("../fonts/fontawesome/fa-regular-400.svg?hu3sw4#fa") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+/* Font Awesome 5 (Solid) */
+@font-face {
+  font-family: 'Font Awesome Solid';
+  src: url("../fonts/fontawesome/fa-solid-900.eot?hu3sw3");
+  src: url("../fonts/fontawesome/fa-solid-900.eot?hu3sw3#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-solid-900.ttf?hu3sw3") format("truetype"), url("../fonts/fontawesome/fa-solid-900.woff?hu3sw3") format("woff"), url("../fonts/fontawesome/fa-solid-900.woff2?hu3sw3") format("woff"), url("../fonts/fontawesome/fa-solid-900.svg?hu3sw3#fa") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+
+/* ************************************************************************************************ */
+/* SCSS Variables ********************************************************************************* */
+/* ************************************************************************************************ */
+/* 5% darker */
+/* 10% darker */
+/* 15% darker */
+/* 20% darker */
+/* 20% lighter */
+/* 5% darker */
+/* 10% darker */
+/* 15% darker */
+/* 20% darker */
+/* Social Network Colors */
+/* Blogger */
+/* Digg */
+/* Dribbble */
+/* Facebook */
+/* Flickr */
+/* Google+ */
+/* Instagram */
+/* LinkedIn */
+/* Medium */
+/* Periscope */
+/* Pinterest */
+/* reddit */
+/* StumbleUpon */
+/* Tumblr */
+/* Twitter */
+/* Vimeo */
+/* YouTube */
+/* ************************************************************************************************ */
+/* SCSS Mixins ************************************************************************************ */
+/* ************************************************************************************************ */
+/* Transitions:
+ * Usage: @include transition(color .3s ease); */
+/* Transform:
+ * Usage: @include transform(scale(0)); */
+/* Cross-browser Box-Sizing:
+ * Usage: @include boxsizing(border-box); */
+/* Cross-browser Opacity:
+ * Usage: @include opacity(0.8); */
+/* Cross-browser Border-Radius:
+ * Usage: @include rounded(3px); */
+/* Cross-browser User-Select:
+ * Usage: @include userselect(none); */
+/* Cross-browser filter: blur():
+ * Usage: @include blur(3px); */
+/* Cross-browser Box-Shadow:
+ * Usage:
+	@include boxshadow(
+		0 1px 4px rgba(0,0,0,0.3),
+		0 0 40px rgba(0,0,0,0.1) inset
+	);
+*/
+/* Cross-browser Linear Background Gradient:
+ * Usage:
+	@include linear-gradient(45deg,black,white);
+*/
+/* Clearfix:
+ * Usage:
+	.container-with-floated-children {
+		@extend %clearfix;
+	}
+*/
+/* Cross-browser Change Placeholder Color:
+ * Usage:
+	@include placeholder-color(white);
+*/
+/* ************************************************************************************************ */
+/* SCSS Functions ********************************************************************************* */
+/* ************************************************************************************************ */
+/** Slightly Lighten a Color
+ * @access public
+ * @param {Color} $color - color to tint
+ * @param {Number} $percentage - percentage of `$color` in returned color
+ * @return {Color}
+ * Usage: color: tint(#daba55, 42%);
+ */
+/** Slightly Darken a Color
+ * @access public
+ * @param {Color} $color - color to shade
+ * @param {Number} $percentage - percentage of `$color` in returned color
+ * @return {Color}
+ * Usage: background-color: shade(#663399, 42%);
+ */
+/* ************************************************************************************************ */
+/* General Styles ********************************************************************************* */
+/* ************************************************************************************************ */
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #DDD;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  /*
+		-webkit-text-stroke: 0.3px;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+		*/ }
+
+div, span, applet, object, iframe, h1, h2, h3, h4,
+h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark,
+audio, video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0; }
+
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none;
+  text-rendering: optimizeLegibility; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul, ol {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote::before, blockquote::after, q::before, q::after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+::-moz-selection {
+  color: #fff;
+  background: #006295;
+  text-shadow: none; }
+
+::selection {
+  color: #fff;
+  background: #006295;
+  text-shadow: none; }
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, li, dd, dt, dl, div, span,
+blockquote, p, blockquote, q,
+aside, main, column, header, footer,
+article, menu, nav, sub, sup {
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; }
+
+h1 {
+  padding: 8px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-transform: uppercase; }
+
+h2 {
+  padding: 4px 0;
+  font-size: 1.20rem;
+  line-height: 1.75rem;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+h4 {
+  padding: 12px 0; }
+
+p {
+  padding: 12px 0;
+  line-height: 1.25rem; }
+
+a {
+  color: #002F49;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-in-out;
+  -khtml-transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out;
+  -ms-transition: color 0.1s ease-in-out;
+  -o-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out; }
+  a:hover {
+    color: #0073AE;
+    text-decoration: none; }
+
+img {
+  border: 0 none;
+  /* Assures that the the maximum width of the image will not be bigger than the size of the containing screen */
+  height: auto;
+  max-width: 100%; }
+
+sup,
+sub {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold;
+  font-weight: 700; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  clear: both;
+  margin: 12px 0 12px;
+  width: 100%;
+  height: 0;
+  border: solid #DDD;
+  border-width: 1px 0 0; }
+
+ins {
+  color: #fff;
+  text-decoration: none;
+  background: #006295; }
+
+mark {
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  background: #006295; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: visible; }
+  pre.code {
+    padding: 15px;
+    display: block;
+    color: #8097a4;
+    font-size: 0.80rem;
+    background-color: #000; }
+
+#dd {
+  float: right; }
+  #dd i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 100%;
+    text-align: center;
+    background: #EAEAEA; }
+    #dd i::before {
+      position: absolute;
+      top: 15px;
+      left: 12px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 7px 0 6px;
+      border-color: #fff transparent transparent transparent;
+      content: ""; }
+
+/* Mozilla Fix */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: 0 none; }
+
+/* Global Box Sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ************************************************************************************************ */
+/* Frame ****************************************************************************************** */
+/* ************************************************************************************************ */
+#root {
+  height: 100%; }
+
+#wrapper {
+  padding: 0;
+  height: 100%;
+  /* Header */
+  /* Content */
+  /* Wrapper Sidebar Navigation State: Collapsed */
+  /* Wrapper Sidebar Navigation State: Expanded */ }
+  #wrapper #header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    height: 56px; }
+  #wrapper #content {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    /* Sidebar Navigation */
+    /* Main */ }
+    #wrapper #content #sidebar-navigation {
+      z-index: 99;
+      margin: 0;
+      padding: 0;
+      float: left;
+      height: 100%;
+      background-color: #EAEAEA;
+      background-color: rgba(234, 234, 234, 0.95);
+      border-right: 1px solid #CCC; }
+    #wrapper #content #main {
+      position: relative;
+      height: 100%;
+      overflow: auto;
+      overflow-x: hidden;
+      overflow-y: auto; }
+      #wrapper #content #main > .main-inner {
+        padding: 0 0 40px; }
+      #wrapper #content #main .main-content {
+        margin: 0 15px; }
+  #wrapper.sidebar-navigation-expanded #content #sidebar-navigation {
+    width: 185px; }
+  #wrapper.sidebar-navigation-expanded #content #main {
+    padding-left: 0; }
+
+#header {
+  background: #111;
+  border-bottom: 1px solid #CCC;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 24px; }
+  #header .main-header {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+    #header .main-header > img {
+      width: 32px;
+      float: left;
+      margin-right: 12px; }
+    #header .main-header > h2 {
+      font-family: "Orbitron", sans-serif;
+      color: #fff;
+      font-weight: 400; }
+
+/*# sourceMappingURL=app.css.map */

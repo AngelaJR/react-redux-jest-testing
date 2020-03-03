@@ -1,0 +1,91 @@
+﻿/* ************************************************************************************************ */
+/* SCSS Variables ********************************************************************************* */
+/* ************************************************************************************************ */
+
+// Margin/Padding Amounts
+$spaceamounts		: (0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100);
+$spacesides			: (all,top,right,bottom,left);
+
+// Browser Vendor Prefixes
+$vendors			: "-webkit-", "-khtml-", "-moz-", "-ms-", "-o-", "";
+
+// Font Stacks
+$font1        		: 'Raleway', Arial, Helvetica, sans-serif;
+$font2        		: 'Orbitron', sans-serif;
+$font3        		: Arial, Helvetica, sans-serif;
+
+// Global Font Size
+$fontsize           : 16px;
+
+// Max-Width
+$maxwidth			: 1200px;
+
+// Color
+$color-white 	    : #fff;
+$color-black        : #000;
+
+//Primary Colors
+$color-blue         : #0073AE;
+$color-green        : #6CB33F;
+
+//Shade
+$color-blue-1		: #006295;  /* 5% darker */
+$color-blue-2		: #00517B;  /* 10% darker */
+$color-blue-3		: #004062;  /* 15% darker */
+$color-blue-4       : #002F49;  /* 20% darker */
+
+$color-green-1      : #E0EB98;  /* 20% lighter */
+$color-green-2		: #61A038;  /* 5% darker */
+$color-green-3		: #558D32;  /* 10% darker */
+$color-green-4		: #4A7A2B;  /* 15% darker */
+$color-green-5		: #33541E;  /* 20% darker */
+
+//Secondary Colors
+$color-red-1        : #960000;
+$color-red-2        : #ce4e4e;
+
+$color-orange-1     : #b87700;
+$color-orange-2     : #fca400;
+
+$color-yellow-1     : #fff9ca;
+$color-yellow-2     : #fdfef0;
+
+//Neutrals
+$color-gray-1		: #FCFCFC;
+$color-gray-2		: #EAEAEA; 
+$color-gray-3		: #DDD;
+$color-gray-4		: #CCC;
+$color-gray-5		: #BBB;
+$color-gray-6		: #AAA;
+$color-gray-7		: #999;
+$color-gray-8		: #888;
+$color-gray-9		: #777;
+$color-gray-10		: #666;
+
+
+$color-darkgray-1	: #555;
+$color-darkgray-2	: #444;
+$color-darkgray-3	: #333;
+$color-darkgray-4	: #222;
+$color-darkgray-5	: #111;
+
+
+
+/* Social Network Colors */
+$color-blogger      : #f57d00; /* Blogger */
+$color-digg         : #356aa0; /* Digg */
+$color-dribbble     : #ea4c89; /* Dribbble */
+$color-facebook     : #3b5998; /* Facebook */
+$color-flickr       : #ff0084; /* Flickr */
+$color-google       : #dc4e41; /* Google+ */
+$color-instagram    : #517fa4; /* Instagram */
+$color-linkedin     : #0077b5; /* LinkedIn */
+$color-medium       : #00ab6b; /* Medium */
+$color-periscope    : #40a4c4; /* Periscope */
+$color-pinterest    : #bd081c; /* Pinterest */
+$color-reddit       : #ff4500; /* reddit */
+$color-stumbleupon  : #f74425; /* StumbleUpon */
+$color-tumblr       : #35465c; /* Tumblr */
+$color-twitter      : #55acee; /* Twitter */
+$color-vimeo        : #1ab7ae; /* Vimeo */
+$color-youtube      : #b31217; /* YouTube */

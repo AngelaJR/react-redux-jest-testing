@@ -1,0 +1,61 @@
+/* ************************************************************************************************ */
+/* Import Fonts *********************************************************************************** */
+/* ************************************************************************************************ */
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,900');
+
+/* Orbitron */
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,600,700,900&display=swap');
+
+/* Font Awesome 5 Brands */
+@font-face {
+	font-family: 'Font Awesome Brands';
+	src:  url('../fonts/fontawesome/fa-brands-400.eot?hu3sw6');
+	src:  url('../fonts/fontawesome/fa-brands-400.eot?hu3sw6#iefix') format('embedded-opentype'),
+		  url('../fonts/fontawesome/fa-brands-400.ttf?hu3sw6') format('truetype'),
+		  url('../fonts/fontawesome/fa-brands-400.woff?hu3sw6') format('woff'),
+		  url('../fonts/fontawesome/fa-brands-400.woff2?hu3sw6') format('woff'),
+		  url('../fonts/fontawesome/fa-brands-400.svg?hu3sw6#fa') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Font Awesome 5 (Light) */
+@font-face {
+	font-family: 'Font Awesome Light';
+	src:  url('../fonts/fontawesome/fa-light-300.eot?hu3sw5');
+	src:  url('../fonts/fontawesome/fa-light-300.eot?hu3sw5#iefix') format('embedded-opentype'),
+		  url('../fonts/fontawesome/fa-light-300.ttf?hu3sw5') format('truetype'),
+		  url('../fonts/fontawesome/fa-light-300.woff?hu3sw5') format('woff'),
+		  url('../fonts/fontawesome/fa-light-300.woff2?hu3sw5') format('woff'),
+		  url('../fonts/fontawesome/fa-light-300.svg?hu3sw5#fa') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* Font Awesome 5 (Regular) */
+@font-face {
+	font-family: 'Font Awesome Regular';
+	src:  url('../fonts/fontawesome/fa-regular-400.eot?hu3sw4');
+	src:  url('../fonts/fontawesome/fa-regular-400.eot?hu3sw4#iefix') format('embedded-opentype'),
+		  url('../fonts/fontawesome/fa-regular-400.ttf?hu3sw4') format('truetype'),
+		  url('../fonts/fontawesome/fa-regular-400.woff?hu3sw4') format('woff'),
+		  url('../fonts/fontawesome/fa-regular-400.woff2?hu3sw4') format('woff'),
+		  url('../fonts/fontawesome/fa-regular-400.svg?hu3sw4#fa') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Font Awesome 5 (Solid) */
+@font-face {
+	font-family: 'Font Awesome Solid';
+	src:  url('../fonts/fontawesome/fa-solid-900.eot?hu3sw3');
+	src:  url('../fonts/fontawesome/fa-solid-900.eot?hu3sw3#iefix') format('embedded-opentype'),
+		  url('../fonts/fontawesome/fa-solid-900.ttf?hu3sw3') format('truetype'),
+		  url('../fonts/fontawesome/fa-solid-900.woff?hu3sw3') format('woff'),
+		  url('../fonts/fontawesome/fa-solid-900.woff2?hu3sw3') format('woff'),
+		  url('../fonts/fontawesome/fa-solid-900.svg?hu3sw3#fa') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
