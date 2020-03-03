@@ -1,0 +1,36 @@
+# NOTES:
+# The purpose of gitignore files is to ensure that certain files not
+# tracked by Git remain untracked.
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+
+# Specific to VS Code and Visual Studio
+.vscode
+.vs
+
+# Specific to JetBrains
+*.idea
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# Prepros Compiler
+prepros-6.config
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+.DS_Store
+
+# track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+
+# track readme.md in the root (i.e. do NOT ignore it)
+!readme.md
