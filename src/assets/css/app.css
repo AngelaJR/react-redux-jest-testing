@@ -8,8 +8,8 @@
 /* ************************************************************************************************ */
 /* Import Fonts *********************************************************************************** */
 /* ************************************************************************************************ */
-/* Raleway */
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,900");
+/* Roboto */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap");
 /* Orbitron */
 @import url("https://fonts.googleapis.com/css?family=Orbitron:400,500,600,700,900&display=swap");
 /* Font Awesome 5 Brands */
@@ -47,15 +47,13 @@
 /* ************************************************************************************************ */
 /* SCSS Variables ********************************************************************************* */
 /* ************************************************************************************************ */
-/* 5% darker */
-/* 10% darker */
-/* 15% darker */
-/* 20% darker */
-/* 20% lighter */
-/* 5% darker */
-/* 10% darker */
-/* 15% darker */
-/* 20% darker */
+/* Margin/Padding Amounts */
+/* Browser Vendor Prefixes */
+/* Font Stacks */
+/* Global Font Size */
+/* Max-Width */
+/* Secondary Colors */
+/* Neutrals */
 /* Social Network Colors */
 /* Blogger */
 /* Digg */
@@ -140,7 +138,7 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1;
   overflow: hidden;
@@ -158,6 +156,11 @@ body {
 		-webkit-text-stroke: 0.3px;
 		text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 		*/ }
+
+main {
+  width: 100%;
+  margin: 12px auto 80px;
+  padding: 12px 24px; }
 
 div, span, applet, object, iframe, h1, h2, h3, h4,
 h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,
@@ -199,18 +202,18 @@ table {
 
 ::-moz-selection {
   color: #fff;
-  background: #006295;
+  background: #EAEAEA;
   text-shadow: none; }
 
 ::selection {
   color: #fff;
-  background: #006295;
+  background: #EAEAEA;
   text-shadow: none; }
 
 h1, h2, h3, h4, h5, h6,
 ul, ol, li, dd, dt, dl, div, span,
 blockquote, p, blockquote, q,
-aside, main, column, header, footer,
+aside, column, header, footer,
 article, menu, nav, sub, sup {
   margin: 0;
   padding: 0;
@@ -220,13 +223,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500; }
 
 h1 {
-  padding: 8px;
   font-size: 1.5rem;
   line-height: 1.75rem;
   text-transform: uppercase; }
 
 h2 {
-  padding: 4px 0;
   font-size: 1.20rem;
   line-height: 1.75rem;
   text-transform: uppercase; }
@@ -243,7 +244,7 @@ p {
   line-height: 1.25rem; }
 
 a {
-  color: #002F49;
+  color: #CCC;
   text-decoration: none;
   -webkit-transition: color 0.1s ease-in-out;
   -khtml-transition: color 0.1s ease-in-out;
@@ -252,7 +253,7 @@ a {
   -o-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out; }
   a:hover {
-    color: #0073AE;
+    color: #EAEAEA;
     text-decoration: none; }
 
 img {
@@ -292,13 +293,13 @@ hr {
 ins {
   color: #fff;
   text-decoration: none;
-  background: #006295; }
+  background: #EAEAEA; }
 
 mark {
   color: #fff;
   font-style: italic;
   font-weight: bold;
-  background: #006295; }
+  background: #EAEAEA; }
 
 /* Redeclare monospace font family: h5bp.com/j */
 pre, code, kbd, samp {
@@ -315,7 +316,7 @@ pre {
   pre.code {
     padding: 15px;
     display: block;
-    color: #8097a4;
+    color: whitesmoke;
     font-size: 0.80rem;
     background-color: #000; }
 
@@ -421,7 +422,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 100%;
     margin: 0 auto; }
     #header .main-header > img {
-      width: 32px;
+      width: 24px;
       float: left;
       margin-right: 12px; }
     #header .main-header > h2 {
